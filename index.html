@@ -22,9 +22,17 @@
                     <h2>Communication parameters</h2>                    
                     <form class="pure-form pure-form-stacked">
                         <fieldset>
-                            <input type="text" id="serverIP" placeholder="Server IP" />
-                            <input type="text" id="serverPort" placeholder="Server Port" />
-                            <button type="button" class="pure-button pure-button-primary">Connect</button>
+                            <label for="serverIP">Server IP</label>
+                            <input type="text" id="serverIP" placeholder="Server IP" value="192.168.168.161" />
+                            <label for="serverPort">Server Port</label>
+                            <input type="text" id="serverPort" placeholder="Server Port" value="81" />
+                            <button type="button" id="connectButton" class="pure-button pure-button-primary">Connect</button>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="requestCount">Request count</label>
+                            <input type="text" id="requestCount" placeholder="Request count" value="10" />
+                            <button type="button" id="sendButton" class="pure-button pure-button-primary">Send</button>
                         </fieldset>
                     </form>
                 </div>
@@ -34,21 +42,21 @@
                 <div>
                     <!-- A wrapper for all the blog posts -->
                     <div class="posts">
-                        <h1 class="content-subhead">Subhead</h1>
+                        <h1 class="content-subhead">Websocket status</h1>
         
                         <!-- A single blog post -->
                         <section class="post">
                             <header class="post-header">
-                                <h2 class="post-title">Title</h2>
+                                <h2 class="post-title" id="wsStatus">Not connected - fill the connection parameters</h2>
         
-                                <p class="post-meta">
-                                    Meta
+                                <p class="post-meta" id="wsMeta">
+                                    Nothing to show
                                 </p>
                             </header>
         
-                            <div class="post-description">
+                            <div class="post-description" id="wsDescription">
                                 <p>
-                                    Post contents
+                                    Nothing to show
                                 </p>
                             </div>
                         </section>
@@ -63,6 +71,6 @@
             </div>
         </div>
 
-        <!-- <script src="js/scripts.js"></script> -->
+        <script src="receiver.js"></script>
     </body>
     </html>
