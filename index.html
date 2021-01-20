@@ -19,13 +19,13 @@
     <body>
 
         <div id="layout" class="pure-g">
-            <div class="sidebar pure-u-1 pure-u-md-1-4">
+            <div class="sidebar pure-u-1 pure-u-md-4-24">
                 <div class="header">
                     <h2>Communication parameters</h2>                    
                     <form class="pure-form pure-form-stacked">
                         <fieldset>
                             <label for="serverIP">Server IP</label>
-                            <input type="text" id="serverIP" placeholder="Server IP" value="192.168.168.161" />
+                            <input type="text" id="serverIP" placeholder="Server IP" value="192.168.168.160" />
                             <label for="serverPort">Server Port</label>
                             <input type="text" id="serverPort" placeholder="Server Port" value="81" />
                             <button type="button" id="connectButton" class="pure-button pure-button-primary">Connect</button>
@@ -33,51 +33,42 @@
 
                         <fieldset>
                             <label for="requestCount">Request count</label>
-                            <input type="text" id="requestCount" placeholder="Request count" value="10" />
+                            <input type="text" id="requestCount" placeholder="Request count" value="5" />
                             <button type="button" id="sendButton" class="pure-button pure-button-primary">Send</button>
                         </fieldset>
                     </form>
+
+                    <h2 id="wsStatus">Not connected - fill the connection parameters</h2>
+
+                    <p id="wsMeta">
+                        Nothing to show...
+                    </p>
+
+                    <p id="wsDescription">
+                        Nothing to show...
+                    </p>
                 </div>
             </div>
         
-            <div class="content pure-u-1 pure-u-md-3-4">
+            <div class="content pure-u-1 pure-u-md-20-24">
                 <div>
                     <!-- A wrapper for all the blog posts -->
                     <div class="posts">
-                        <h1 class="content-subhead">Websocket status</h1>
-        
                         <!-- A single blog post -->
                         <section class="post">
-                            <header class="post-header">
+                            <!-- <header class="post-header">
                                 <h2 class="post-title" >Chart</h2>
-                            </header>
+                            </header> -->
         
-                            <div class="post-description" id="chart"></div>
-                        </section>
-
-                        <!-- A single blog post -->
-                        <section class="post">
-                            <header class="post-header">
-                                <h2 class="post-title" id="wsStatus">Not connected - fill the connection parameters</h2>
-        
-                                <p class="post-meta" id="wsMeta">
-                                    Nothing to show
-                                </p>
-                            </header>
-        
-                            <div class="post-description" id="wsDescription">
-                                <p>
-                                    Nothing to show
-                                </p>
-                            </div>
+                            <div class="post-description" id="chartA"></div>
+                            <div class="post-description" id="chartM"></div>
+                            <div class="post-description" id="chartG"></div>
                         </section>
                     </div>
         
-                    
-        
-                    <div class="footer">
+                    <!-- <div class="footer">
                         Footer
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
